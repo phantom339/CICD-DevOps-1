@@ -6,22 +6,22 @@ pipeline {
 	stages {
 		stage('Stage1: Hello Clean Stage 1') {
 			steps {
-				bat 'mvn clean'
+				sh 'mvn clean'
 				}
 			}
 		stage ('Stage 2: Test Stage') {
 			steps {
-				bat 'mvn test'
+				sh 'mvn test'
 				}
 			}
 		stage ('Stage 3: My Package'){
 			steps {
-				bat 'mvn package'
+				sh 'mvn package'
 				}
 			}			
 		stage ('Stage 4: My Final Build Stage'){
 			steps {
-				bat 'mvn install'
+				sh 'mvn install'
 				}
 			}	
 		stage ('Stage Final: Build Success'){
